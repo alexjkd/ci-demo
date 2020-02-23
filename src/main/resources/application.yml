@@ -5,6 +5,6 @@ spring:
     password: secret
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-#server:
-#  servlet:
-#    context-path: /spring-app
+management:
+  security:
+    enabled: false
