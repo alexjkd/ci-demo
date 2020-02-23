@@ -15,6 +15,17 @@ public class Employee {
 //        this.fk_department_id = fk_department_id;
 //    }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", fk_department_id=" + fk_department_id +
+                '}';
+    }
+
     public Employee() {
     }
 
