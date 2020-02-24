@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example;
+
+import org.springframework.stereotype.Component;
 
 public class Employee {
     private Integer id;

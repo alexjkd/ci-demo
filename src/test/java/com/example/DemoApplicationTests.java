@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.example;
 
+import com.example.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.example.demo.EmployeeMapper;
 
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
@@ -11,12 +11,11 @@ import static org.springframework.test.util.AssertionErrors.assertEquals;
 class DemoApplicationTests {
 
     @Autowired
-    EmployeeController controller;
-
+    EmployeeService employeeService;
 
     @Test
     void testController(){
-        Employee employee = controller.getEmployeeById(1);
+        Employee employee = employeeService.getEmployeeById(1);
         assertEquals("test name:", "alex",employee.getName());
         System.out.println("get employee =>"+ employee);
     }
