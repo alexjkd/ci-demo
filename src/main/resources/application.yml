@@ -4,3 +4,15 @@ spring:
     username: default
     password: secret
     driver-class-name: com.mysql.cj.jdbc.Driver
+    initializationMode: always
+    schema:
+      - classpath:/sql/schema.sql
+    data:
+      - classpath:/sql/data.sql
+
+logging:
+  level:
+    root: warn
+    com:
+      example: trace
+
