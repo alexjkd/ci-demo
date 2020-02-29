@@ -1,13 +1,11 @@
 package com.example;
 
-import org.springframework.stereotype.Component;
-
 public class Employee {
     private Integer id;
     private String name;
-    private Integer age;
-    private Float salary;
-    private Integer fk_department_id;
+    private Integer gender;
+    private String email;
+    private Department dept;
 
 //    public Employee(Integer id, String name, Integer age, Float salary, Integer fk_department_id) {
 //        this.id = id;
@@ -17,21 +15,9 @@ public class Employee {
 //        this.fk_department_id = fk_department_id;
 //    }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                ", fk_department_id=" + fk_department_id +
-                '}';
-    }
-
     public Employee() {
+        this.dept = new Department();
     }
-
-
     public Integer getId() {
         return id;
     }
@@ -48,27 +34,38 @@ public class Employee {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getGender() {
+        return gender;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setGender(Integer gender) {
+        this.gender = gender;
     }
 
-    public Float getSalary() {
-        return salary;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSalary(Float salary) {
-        this.salary = salary;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Integer getFk_department_id() {
-        return fk_department_id;
+    public Department getDept() {
+        return dept;
     }
 
-    public void setFk_department_id(Integer fk_department_id) {
-        this.fk_department_id = fk_department_id;
+    public void setDept(Department dept) {
+        this.dept = dept;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", email='" + email + '\'' +
+                ", dept=" + dept +
+                '}';
     }
 }
