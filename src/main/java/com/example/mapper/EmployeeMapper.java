@@ -10,8 +10,11 @@ public interface EmployeeMapper {
     @Results({
             @Result(id=true,property = "id", column = "id"),
             @Result(property = "dept", column = "fk_department_id",
-                    one = @One(select = "com.example.mapper.DepartmentMapper.getDepartmentById"))
+                    one = @One(select = "com.example.mapper.DepartmentMapper.getDepartmentById")),
+            @Result(property = "orders",column = "id",
+                    many = @Many(select = "com.example.mapper.OrderMapper.getOrdersByEmoId"))
     })
     public Employee getEmployeeById(Integer id);
+
 
 }

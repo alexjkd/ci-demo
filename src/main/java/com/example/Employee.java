@@ -1,11 +1,14 @@
 package com.example;
 
+import java.util.List;
+
 public class Employee {
     private Integer id;
     private String name;
     private Integer gender;
     private String email;
     private Department dept;
+    private List<Order> orders;
 
 //    public Employee(Integer id, String name, Integer age, Float salary, Integer fk_department_id) {
 //        this.id = id;
@@ -56,6 +59,14 @@ public class Employee {
 
     public void setDept(Department dept) {
         this.dept = dept;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
