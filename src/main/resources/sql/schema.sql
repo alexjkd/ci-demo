@@ -1,5 +1,5 @@
 USE `docker-test`;
-DROP TABLE IF EXISTS tbl_order;
+DROP TABLE IF EXISTS tbl_orders;
 DROP TABLE IF EXISTS  tbl_employee;
 DROP TABLE IF EXISTS tbl_department;
 
