@@ -10,13 +10,13 @@ import static org.springframework.test.util.AssertionErrors.assertEquals;
 @SpringBootTest
 class DemoApplicationTests {
 
-    @Autowired
-    EmployeeService employeeService;
+    //@Autowired
+    //EmployeeService employeeService;
 
     @Test
     void testController(){
 //        Employee employee = employeeService.getEmployeeById(1);
 //        assertEquals("test name:", "alex",employee.getName());
-        System.out.println("get employee =>"+ employee);
+        //System.out.println("get employee =>"+ employee);
     }
 }
